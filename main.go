@@ -1,7 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"context"
+
+	"github.com/mircearem/resourcer/rh"
+)
 
 func main() {
-	fmt.Println("Resource Usage Server")
+	ctx := context.Background()
+	rhandler := rh.NewHandler(ctx)
+
 }

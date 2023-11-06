@@ -89,7 +89,7 @@ func NewHandler(ctx context.Context) *ResourceHandler {
 }
 
 // Initialize the Resource Handler
-func (r *ResourceHandler) init() error {
+func (r *ResourceHandler) Init() error {
 	var wg sync.WaitGroup
 
 	numCnt := 4
@@ -263,7 +263,7 @@ func (r *ResourceHandler) getCpuInformation() error {
 
 func (r *ResourceHandler) Run() {
 	// Initialize the server first
-	if err := r.init(); err != nil {
+	if err := r.Init(); err != nil {
 		log.Fatalln(err)
 	}
 	// Set the timers for the update functions
